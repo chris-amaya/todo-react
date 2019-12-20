@@ -1,0 +1,171 @@
+body {
+    background-color: #0093E9;
+    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+    background-size: cover;
+    height: 100vh;
+    font-family: 'Open Sans';
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --green-color: #3FC1C9;
+    --white-color: #F5F5F5;
+    --pink-color: #FC5185;
+    --blue-color: #364F6B
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+    padding: 20px;
+    padding-bottom: 50px;
+    box-sizing: border-box;
+}
+
+.todo {
+    /* background: var(--green-color); */
+    background-color: #FF3CAC;
+    background-image: linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
+}
+
+.todo .container {
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.todo h1 {
+    width: 100%;
+    text-align: center;
+    color: #fff;
+}
+
+.add-item {
+    width: 100%;
+    display: flex;
+}
+
+.add-item input {
+    width: 80%;
+    padding: unset;
+    padding: 25px 20px;
+    border: none;
+    color: #fff;
+    font-size: 1.2em;
+    background: var(--blue-color);
+}
+
+.add-item input::placeholder {
+    color: #fff;
+}
+
+.icon-add {
+    width: 20%;
+    background: var(--pink-color);
+}
+
+.icon-add i {
+    color: #fff;
+    width: 100%;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.items {
+    background: var(--white-color);
+    width: 100%;
+    margin-top: 30px;
+}
+
+.items .item {
+    display: flex;
+    width: 100%;
+    padding: 10px 0px 10px 30px;
+    box-sizing: border-box;
+    border-bottom: 2px solid #C6C6C6;
+}
+
+.item:last-child {
+    border-bottom: none;
+}
+
+.items .item p {
+    width: 70%;
+}
+
+.items .item .controls {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 30%;
+}
+
+.items .item .controls div {
+    width: 100%;
+    height: 100%; 
+}
+
+.items .item .controls .delete-container:hover > i {   
+    color: #b80a0a;
+}
+
+.items .item .controls .edit-container:hover > i {
+    color: var(--pink-color);
+}
+
+.items .item .controls div i { 
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.items .item .controls div label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+input[type="checkbox"] { 
+    position: absolute; opacity: 0; z-index: -1; 
+}
+input[type="checkbox"]+span { 
+    color: #000;
+    display: flex; 
+    align-items: center; 
+    width: 20px;
+    height: 20px;
+    border: 3px solid #C6C6C6;
+    border-radius: 5px;
+
+}
+input[type="checkbox"]+span:before { 
+    content: '';
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    box-sizing: border-box;
+    /* background: var(--pink-color); */
+    background: transparent;
+}
+input[type="checkbox"]:checked+span:before {
+    font-family: FontAwesome;
+    text-align: center;
+    content: '\f00c';
+}
+
+.finished {
+    text-decoration-line: line-through;
+    color: #a6a6a6;
+}
